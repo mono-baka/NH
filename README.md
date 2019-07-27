@@ -15,7 +15,8 @@
 3. サーバーは送信者用セル部分をお返しにアプリへ返す
 <br>  
 <img src="https://github.com/mono-baka/NH/blob/master/3.png"><br>  
-## NH circle share folder
+
+## 開発途上アプリ一覧
 hello:位置、方位を取得、ライブドア提供の天気APIから宇都宮の天気を表示<br>  
 connect_v0:位置、方位を取得、google spreadsheetから値を取得<br>  
 connect_v0_1:uuid、位置、方位を取得しspreadsheetへurlクエリで送信、spreadsheetからメッセージ取得<br>  
