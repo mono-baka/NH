@@ -15,6 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     //user user interface
     @IBOutlet weak var console: UITextView!
+    @IBOutlet weak var info: UILabel!
     //user locate
     var locationManager : CLLocationManager!
     //user debug console
@@ -36,6 +37,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.console.text = self.disp;
         console.isEditable = false;
         console.isSelectable = false;
+        info.lineBreakMode = .byWordWrapping;
+        info.numberOfLines = 0;
         
         //user locate init
         locationManager = CLLocationManager.init()
@@ -106,6 +109,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         //user compass changing
         self.compass = "".appendingFormat("%.2f", newHeading.magneticHeading);
+        self.info.text = "latitude:"+self.latitude+"\n";
+        self.info.text?.append("longitude:"+self.longitude+"\n");
+        self.info.text?.append("compass:"+self.compass+"\n");
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         //user this function is called when any error
