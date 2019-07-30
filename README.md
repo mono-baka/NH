@@ -25,7 +25,7 @@ connect_v0_1:uuid、位置、方位を取得しspreadsheetへurlクエリで送�
 ### アプリ動作説明
  起動後、ボタンを押すとspreadsheetにuuid longitude latitude compassが書き込まれる<br>  
  
- spreadsheet(URL=https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit#gid=0)の内容<br>  
+ spreadsheet(URL=https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing)の内容<br>  
  <img src="https://github.com/mono-baka/NH/blob/master/1.png" width="500"><br>  
  <br>  
  全体の流れとしては<br>  
