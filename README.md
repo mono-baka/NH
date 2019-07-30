@@ -19,7 +19,25 @@
 hello:位置、方位を取得、ライブドア提供の天気APIから宇都宮の天気を表示<br>  
 connect_v0:位置、方位を取得、google spreadsheetから値を取得<br>  
 connect_v0_1:uuid、位置、方位を取得しspreadsheetへurlクエリで送信、spreadsheetからメッセージ取得<br>  
+connect_v0_2:送信、受信など基本的システム完成に伴いβ版の0シリーズ終了<br>  
 細かい説明はソースコード参照
+
+## connect_v0_2説明
+### アプリ動作説明
+<img src="https://github.com/mono-baka/NH/blob/master/2019-07-30%2023.23.03.png" width="500"><br>   
+getは実機では1[Hz]で呼ばれる<br>   
+実際に受信者がgetを押し、サーバー（シート）にGet要求したところ<br>   
+<img src="https://github.com/mono-baka/NH/blob/master/s4.png" width="500"><br>   
+サーバーはすべての使用者の位置、方位を把握し続ける<br>   
+送信者として別の号機（SIM機）を用意しPost要求<br>   
+<img src="https://github.com/mono-baka/NH/blob/master/5.png" width="500"><br>   
+サーバーによって最も近い受信者の"xxx"部分に送信者のデータが書き込まれる、ついでに空いてる受信者messageキーに相対距離も入れている（使用法検討中）<br>   
+この状態で受信者が（送信者ではない）再びGet要求<br>   
+<img src="https://github.com/mono-baka/NH/blob/master/2019-07-30%2023.22.12.png" width="500"><br>   
+受信者の元に送信者の情報とmessage「yeaaar」が届く
+### 今後の展開
+宮田の作ってくれた音声認識と組み合わせます（～今週末）<br>   
+動作したビデオをMG報告会までに撮ります
 
 ## connect_v0_1説明
 ### アプリ動作説明
