@@ -14,6 +14,7 @@
 3. サーバーは送信者用セル部分をお返しにアプリへ返す
 <br>  
 <img src="https://github.com/mono-baka/NH/blob/master/3.png"><br>  
+
 ## サーバー（笑）について
 spreadsheetのリンク(URL="https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing")<br>   
 スクリプトのリンク(URL="https://script.google.com/d/1ViP1VshUX4b69YLqoCKJCOEyZP5-tGvNe-nZx5P9qtG8R45gzZQmHliC/edit?usp=sharing")<br>   
