@@ -14,6 +14,10 @@
 3. サーバーは送信者用セル部分をお返しにアプリへ返す
 <br>  
 <img src="https://github.com/mono-baka/NH/blob/master/3.png"><br>  
+## サーバー（笑）について
+spreadsheetのリンク(URL=https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing)<br>   
+スクリプトのリンク(URL=https://script.google.com/d/1ViP1VshUX4b69YLqoCKJCOEyZP5-tGvNe-nZx5P9qtG8R45gzZQmHliC/edit?usp=sharing)<br>   
+間違って編集して動かなくなったらブチギレて家まで来るので編集不可。デバッグは各自コピペして自分のプロジェクト内で実行すること<br>   
 
 ## 開発途上アプリ一覧
 hello:位置、方位を取得、ライブドア提供の天気APIから宇都宮の天気を表示<br>  
