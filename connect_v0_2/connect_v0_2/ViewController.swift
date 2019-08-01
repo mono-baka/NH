@@ -11,38 +11,47 @@ import CoreLocation
 import Foundation
 
 
-class ViewController: UIViewController, CLLocationManagerDelegate,
-    UITextFieldDelegate{
-    
-    //user user interface
+class ViewController: UIViewController,
+    CLLocationManagerDelegate,//set GPS delegate
+    UITextFieldDelegate//set UIField deligate
+{
+    //user user interface parameter
     @IBOutlet weak var console: UITextView!
     @IBOutlet weak var info: UILabel!
     @IBOutlet weak var send_text: UITextField!
-    //user locate
+    //user locate global parametr
     var locationManager : CLLocationManager!
-    //user debug console
+    //user disp debug console message parameter
     var disp = "debug console";
     //user parameter
     var uuid = "xxx";
-    var longitude = "000";
     var latitude = "000";
+    var longitude = "000";
     var compass = "000";
+    var message = "000";
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //user send text
-        send_text.delegate = self;
-        send_text.keyboardType = .asciiCapable;
+        //user set callback function when finish this app
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(ViewController.finish(_:)),
+            name: UIApplication.willTerminateNotification,
+            object: nil)
         
-        //user uuid get
+        //user set send text delegate
+        send_text.delegate = self;
+        send_text.keyboardType = .asciiCapable;//only ascii keyboard
+        
+        //user set uuid code
         self.uuid = NSUUID().uuidString;
         
         //user debug console init
         self.console.text = self.disp;
-        console.isEditable = false;
-        console.isSelectable = false;
-        info.lineBreakMode = .byWordWrapping;
-        info.numberOfLines = 0;
+        console.isEditable = false;//disable edit
+        console.isSelectable = false;//disable select
+        info.lineBreakMode = .byWordWrapping;//set linebreak option
+        info.numberOfLines = 0;//disable number of line
         
         //user locate init
         locationManager = CLLocationManager.init()
@@ -50,12 +59,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate,
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         locationManager.distanceFilter = 1;
         locationManager.delegate = self as? CLLocationManagerDelegate;
-        //period of 1[degrees]
+        //call function period of 1[degrees]
         locationManager.headingFilter = kCLHeadingFilterNone;
         locationManager.headingOrientation = .portrait;
         locationManager.startUpdatingHeading();
         
-        //user permission state
+        //user ask permission state
         let status = CLLocationManager.authorizationStatus()
         if(status == .notDetermined){
             print("Don't choose permission");
@@ -73,16 +82,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate,
         }
     }
     override func didReceiveMemoryWarning() {
-        //maybe, this function is called when dipose memory?
+        //memory warning!
         super.didReceiveMemoryWarning();
     }
+    @objc func finish(_ notification: Notification?){
+        self.message = "";
+        var url_st = "https://script.google.com/macros/s/AKfycbwgaP67nbisXt1SXh-F-HfHsH7ZVaSAxAG84qIeC1Zy3t0FH3xi/exec";
+        let url_parameter = "?uuid=" + self.uuid + "&longitude=" + self.longitude + "&latitude=" + self.latitude + "&compass=" + self.compass + "&message=" + self.message;
+        url_st = url_st + url_parameter;
+        post(url: url_st);
+        print("[finish] app finished!");
+    }
+    
     @IBAction func weather_load(_ sender: Any) {
         //user api url(=google spreadsheet)
         var url_st = "https://script.google.com/macros/s/AKfycbwgaP67nbisXt1SXh-F-HfHsH7ZVaSAxAG84qIeC1Zy3t0FH3xi/exec"
         let url_parameter = "?uuid=" + self.uuid + "&latitude=" + self.latitude + "&longitude=" + self.longitude + "&compass=" + self.compass;
         url_st = url_st + url_parameter;
-        print(url_st);
-        guard let url = URLComponents(string: url_st) else {return}
+        get(url: url_st);
+        self.console.text = self.disp;
+    }
+    func get(url urlString: String){
+        guard let url = URLComponents(string: urlString) else {return}
         let task = URLSession.shared.dataTask(with: url.url!) { (data, responce, error) in
             if error != nil {
                 self.disp = error!.localizedDescription;
@@ -100,9 +121,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate,
             }
             let json: [position] = try! JSONDecoder().decode([position].self, from: _data);//str_data.data(using: .utf8)!)
             self.disp = json[0].uuid + "\n" + json[0].latitude + "\n" + json[0].longitude + "\n" + json[0].compass + "\n" + json[0].message;
-            }
-            task.resume()
-        self.console.text = self.disp;
+        }
+        task.resume()
     }
     @IBAction func post_button(_ sender: Any) {
         var url_st = "https://script.google.com/macros/s/AKfycbwgaP67nbisXt1SXh-F-HfHsH7ZVaSAxAG84qIeC1Zy3t0FH3xi/exec";
@@ -132,7 +152,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate,
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         //user compass changing
         self.compass = "".appendingFormat("%.2f", newHeading.magneticHeading);
-        self.info.text = "latitude:"+self.latitude+"\n";
+        self.info.text = "uuid:" + self.uuid+"\n";
+        self.info.text?.append("latitude:"+self.latitude+"\n");
         self.info.text?.append("longitude:"+self.longitude+"\n");
         self.info.text?.append("compass:"+self.compass+"\n");
     }
