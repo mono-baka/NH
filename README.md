@@ -1,5 +1,5 @@
 # 目指すシステム
-２つのシステム（プログラム）を想定<br>  
+２つのシステム（プログラム）を想定  
 1. アプリ（送受信）
 2. サーバー(spread sheet)
 <br>送受信はサーバーを介して行われる
@@ -12,21 +12,35 @@
 1. アプリが個体識別番号(uuid)、位置、方位をサーバーへ通知(HTTP通信：Getリクエスト)
 2. サーバーはjava script言語による処理で個体情報をセルにリストアップ
 3. サーバーは送信者用セル部分をお返しにアプリへ返す
-<br>  
-<img src="https://github.com/mono-baka/NH/blob/master/3.png"><br>  
+  
+<img src="https://github.com/mono-baka/NH/blob/master/3.png">  
 
 ## サーバー（笑）について
-spreadsheetのリンク(URL="https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing")<br>   
-スクリプトのリンク(URL="https://script.google.com/d/1ViP1VshUX4b69YLqoCKJCOEyZP5-tGvNe-nZx5P9qtG8R45gzZQmHliC/edit?usp=sharing")<br>   
-間違って編集して動かなくなったらブチギレて家まで来るので編集不可。デバッグは各自コピペして自分のプロジェクト内で実行すること<br>   
+[spreadsheetのリンク](URL="https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing")   
+[スクリプトのリンク](URL="https://script.google.com/d/1ViP1VshUX4b69YLqoCKJCOEyZP5-tGvNe-nZx5P9qtG8R45gzZQmHliC/edit?usp=sharing")   
+間違って編集して動かなくなったらブチギレて家まで来るので編集不可。デバッグは各自コピペして自分のプロジェクト内で実行すること   
 
 ## 開発途上アプリ一覧
-hello:位置、方位を取得、ライブドア提供の天気APIから宇都宮の天気を表示<br>  
-connect_v0:位置、方位を取得、google spreadsheetから値を取得<br>  
-connect_v0_1:uuid、位置、方位を取得しspreadsheetへurlクエリで送信、spreadsheetからメッセージ取得<br>  
-connect_v0_2:送信、受信など基本的システム完成に伴いβ版の0シリーズ終了<br>  
+hello:位置、方位を取得、ライブドア提供の天気APIから宇都宮の天気を表示  
+connect_v0:位置、方位を取得、google spreadsheetから値を取得  
+connect_v0_1:uuid、位置、方位を取得しspreadsheetへurlクエリで送信、spreadsheetからメッセージ取得  
+connect_v0_2:送信、受信など基本的システム完成に伴いβ版の0シリーズ終了  
+connect_v1_0:音声認識を加えた正式リリース  
 細かい説明はソースコード参照
+## connect_v1_0説明
+### アプリ動作説明
+・バックグラウンドでGetリクエストを実行  
+このアプリは1秒おきに呼ばれるメソッドでuuid,latitude,longitudeを送っている  
+<font color="Red">そのためspreadsheetからサイバー攻撃だと間違われないように注意（アプリ起動させて放置とかやめてね）</font>  
 
+アプリ終了はホームボタンを２回押してアプリを上へスワイプ。ホームボタン押してもこのアプリはバックグラウンドで起動し続けている
+  
+・Postリクエスト  
+Postリクエストはボタンを押すと実行
+  
+・音声認識
+ほぼコピペしました（ありがとう！）
+常に作動しており認識した音声は常にテキストボックスに入力される。そのためテキストを消したいときは普通にキーボードから消す。connect_v0_2に音声認識くっつけただけ
 ## connect_v0_2説明
 ### アプリ動作説明
 <img src="https://github.com/mono-baka/NH/blob/master/2019-07-30%2023.23.03.png" width="500"><br>   
