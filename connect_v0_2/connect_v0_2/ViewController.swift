@@ -142,7 +142,8 @@ class ViewController: UIViewController,
         post(url: url_st);
     }
     func post(url urlString: String){
-        var request = URLRequest(url: URL(string: urlString)!);
+        let url_enc = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed);
+        var request = URLRequest(url: URL(string: url_enc!)!);
         request.httpMethod = "POST";
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         let task = URLSession.shared.dataTask(with: request, completionHandler: {data, response, error in
@@ -152,6 +153,7 @@ class ViewController: UIViewController,
             }
         })
         task.resume();
+        
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //user locate callback freq:1[Hz]
