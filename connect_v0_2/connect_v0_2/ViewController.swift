@@ -91,7 +91,17 @@ class ViewController: UIViewController,
         let url_parameter = "?uuid=" + self.uuid + "&longitude=" + self.longitude + "&latitude=" + self.latitude + "&compass=" + self.compass + "&message=" + self.message;
         url_st = url_st + url_parameter;
         post(url: url_st);
-        print("[finish] app finished!");
+        let alert = UIAlertController(
+            title: "disable app!",
+            message: "",
+            preferredStyle: UIAlertController.Style.alert);
+        let okayButton = UIAlertAction(
+            title: "OK",
+            style: UIAlertAction.Style.cancel,
+            handler: nil);
+        alert.addAction(okayButton);
+        present(alert, animated: true, completion:  nil);
+        print("[finish] app finished!" + url_st);
     }
     
     @IBAction func weather_load(_ sender: Any) {
