@@ -16,8 +16,8 @@
 <img src="https://github.com/mono-baka/NH/blob/master/3.png">  
 
 ## サーバー（笑）について
-[spreadsheetのリンク](URL="https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing")   
-[スクリプトのリンク](URL="https://script.google.com/d/1ViP1VshUX4b69YLqoCKJCOEyZP5-tGvNe-nZx5P9qtG8R45gzZQmHliC/edit?usp=sharing")   
+[spreadsheetのリンク](https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing)   
+[スクリプトのリンク](https://script.google.com/d/1ViP1VshUX4b69YLqoCKJCOEyZP5-tGvNe-nZx5P9qtG8R45gzZQmHliC/edit?usp=sharing)   
 間違って編集して動かなくなったらブチギレて家まで来るので編集不可。デバッグは各自コピペして自分のプロジェクト内で実行すること   
 
 ## 開発途上アプリ一覧
@@ -62,7 +62,7 @@ getは実機では1[Hz]で呼ばれる<br>
 ### アプリ動作説明
  起動後、ボタンを押すとspreadsheetにuuid longitude latitude compassが書き込まれる<br>  
  
- spreadsheet(URL="https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing")の内容<br>  
+ [spreadsheet](https://docs.google.com/spreadsheets/d/1QoUJ04bj1sw9MNZ2GXShHsBfVUnRHMhX8pczXC4hgfM/edit?usp=sharing)の内容<br>  
  <img src="https://github.com/mono-baka/NH/blob/master/1.png" width="500"><br>  
  <br>  
  全体の流れとしては<br>  
