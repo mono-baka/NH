@@ -13,10 +13,11 @@
 		0112FD4622C8C16500F1A51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0112FD4522C8C16500F1A51B /* Assets.xcassets */; };
 		0112FD4922C8C16500F1A51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0112FD4722C8C16500F1A51B /* LaunchScreen.storyboard */; };
 		0191C16922D0F33F00C6489C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0191C16822D0F33F00C6489C /* CoreLocation.framework */; };
+		0194D48B2312B49400CD743D /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194D48A2312B49400CD743D /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0112FD3B22C8C15300F1A51B /* connect_v0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect_v0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0112FD3B22C8C15300F1A51B /* connect_v2_0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect_v2_0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0112FD3E22C8C15300F1A51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0112FD4022C8C15300F1A51B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0112FD4322C8C15300F1A51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +25,7 @@
 		0112FD4822C8C16500F1A51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0112FD4A22C8C16500F1A51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0191C16822D0F33F00C6489C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0194D48A2312B49400CD743D /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,7 @@
 		0112FD3222C8C15300F1A51B = {
 			isa = PBXGroup;
 			children = (
-				0112FD3D22C8C15300F1A51B /* connect_v0 */,
+				0112FD3D22C8C15300F1A51B /* connect_v2_0 */,
 				0112FD3C22C8C15300F1A51B /* Products */,
 				0191C16722D0F33F00C6489C /* Frameworks */,
 			);
@@ -50,23 +52,24 @@
 		0112FD3C22C8C15300F1A51B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0112FD3B22C8C15300F1A51B /* connect_v0.app */,
+				0112FD3B22C8C15300F1A51B /* connect_v2_0.app */,
 			);
 			name = Products;
-			path = connect_v0;
+			path = connect_v2_0;
 			sourceTree = "<group>";
 		};
-		0112FD3D22C8C15300F1A51B /* connect_v0 */ = {
+		0112FD3D22C8C15300F1A51B /* connect_v2_0 */ = {
 			isa = PBXGroup;
 			children = (
 				0112FD3E22C8C15300F1A51B /* AppDelegate.swift */,
 				0112FD4022C8C15300F1A51B /* ViewController.swift */,
 				0112FD4222C8C15300F1A51B /* Main.storyboard */,
+				0194D48A2312B49400CD743D /* ViewController2.swift */,
 				0112FD4522C8C16500F1A51B /* Assets.xcassets */,
 				0112FD4722C8C16500F1A51B /* LaunchScreen.storyboard */,
 				0112FD4A22C8C16500F1A51B /* Info.plist */,
 			);
-			path = connect_v0;
+			path = connect_v2_0;
 			sourceTree = "<group>";
 		};
 		0191C16722D0F33F00C6489C /* Frameworks */ = {
@@ -75,15 +78,15 @@
 				0191C16822D0F33F00C6489C /* CoreLocation.framework */,
 			);
 			name = Frameworks;
-			path = connect_v0;
+			path = connect_v2_0;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0112FD3A22C8C15300F1A51B /* connect_v0 */ = {
+		0112FD3A22C8C15300F1A51B /* connect_v2_0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0112FD4D22C8C16500F1A51B /* Build configuration list for PBXNativeTarget "connect_v0" */;
+			buildConfigurationList = 0112FD4D22C8C16500F1A51B /* Build configuration list for PBXNativeTarget "connect_v2_0" */;
 			buildPhases = (
 				0112FD3722C8C15300F1A51B /* Sources */,
 				0112FD3822C8C15300F1A51B /* Frameworks */,
@@ -93,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = connect_v0;
+			name = connect_v2_0;
 			productName = hello;
-			productReference = 0112FD3B22C8C15300F1A51B /* connect_v0.app */;
+			productReference = 0112FD3B22C8C15300F1A51B /* connect_v2_0.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0112FD3622C8C15300F1A51B /* Build configuration list for PBXProject "connect_v0" */;
+			buildConfigurationList = 0112FD3622C8C15300F1A51B /* Build configuration list for PBXProject "connect_v2_0" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0112FD3A22C8C15300F1A51B /* connect_v0 */,
+				0112FD3A22C8C15300F1A51B /* connect_v2_0 */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +159,7 @@
 			files = (
 				0112FD4122C8C15300F1A51B /* ViewController.swift in Sources */,
 				0112FD3F22C8C15300F1A51B /* AppDelegate.swift in Sources */,
+				0194D48B2312B49400CD743D /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y6KAHVBGMW;
-				INFOPLIST_FILE = connect_v0/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/connect_v2_0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fumiya-tellus-yahoo.co.jp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,7 +325,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y6KAHVBGMW;
-				INFOPLIST_FILE = connect_v0/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/connect_v2_0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,14 +333,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fumiya-tellus-yahoo.co.jp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0112FD3622C8C15300F1A51B /* Build configuration list for PBXProject "connect_v0" */ = {
+		0112FD3622C8C15300F1A51B /* Build configuration list for PBXProject "connect_v2_0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0112FD4B22C8C16500F1A51B /* Debug */,
@@ -345,7 +349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0112FD4D22C8C16500F1A51B /* Build configuration list for PBXNativeTarget "connect_v0" */ = {
+		0112FD4D22C8C16500F1A51B /* Build configuration list for PBXNativeTarget "connect_v2_0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0112FD4E22C8C16500F1A51B /* Debug */,

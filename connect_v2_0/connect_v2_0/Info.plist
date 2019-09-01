@@ -39,6 +39,10 @@
 	<string>位置情報の検出に必要です</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>位置情報の検出に必要です</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>use speech</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
